@@ -21,9 +21,9 @@ function Navbar() {
     const [openSearch, setOpenSearch] = useState(false)
 
     if (openMenu) {
-        return <div className='bg-white absolute top-0 right-0 left-0 bottom-0 flex-row p-5 transition-all '>
+        return <div className='bg-white absolute top-0 right-0 left-0 bottom-0 flex-row p-5 transition-all z-50'>
             <div className='flex justify-end'>
-                <IoIosClose className=' text-3xl text-right' onClick={() => setOpenMenu(false)} />
+                <IoIosClose className='cursor-pointer text-3xl text-right' onClick={() => setOpenMenu(false)} />
             </div>
             <div className='flex-row justify-center text-center'>
                 {nav_links?.map((item, index) => {
@@ -36,9 +36,9 @@ function Navbar() {
     }
 
     if (openSearch) {
-        return <div className='bg-white absolute top-0 right-0 left-0 bottom-0 flex-row p-5 transition-all '>
+        return <div className='bg-white absolute top-0 right-0 left-0 bottom-0 flex-row p-5 transition-all z-50'>
             <div className='flex justify-end'>
-                <IoIosClose className=' text-3xl text-right' onClick={() => setOpenSearch(false)} />
+                <IoIosClose className='cursor-pointer text-3xl text-right' onClick={() => setOpenSearch(false)} />
             </div>
             <div className='flex-row justify-center text-center'>
                 <input placeholder='Search...' className='border p-3 mt-5 rounded-lg' />
@@ -56,9 +56,9 @@ function Navbar() {
                         )
                     })}
                 </div>
-                <div className='flex gap-2'>
-                    <FaBars className=' md:hidden' onClick={() => setOpenMenu(true)} />
-                    <FaSearch className='' onClick={() => setOpenSearch(true)} />
+                <div className='flex gap-4'>
+                    <FaBars className='cursor-pointer md:hidden' onClick={() => setOpenMenu(true)} />
+                    <FaSearch className='cursor-pointer' onClick={() => setOpenSearch(true)} />
                 </div>
             </div>
 

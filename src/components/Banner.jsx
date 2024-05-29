@@ -2,12 +2,12 @@ import React from 'react'
 
 const Banner = () => {
     return (
-        <div className='group cursor-pointer'>
+        <div className='group cursor-pointer z-40'>
             <div className="overflow-hidden  shadow-lg w-full justify-center">
                 <img
                     src="https://new.axilthemes.com/demo/react/papr/images/posts/post_1.jpg?imwidth=1080"
                     alt="Sample"
-                    className="transform transition duration-500 hover:scale-110 object-cover m-auto w-full"
+                    className="transform transition duration-500 hover:scale-110 object-cover m-auto w-full z-40"
                 />
             </div>
             <div>
