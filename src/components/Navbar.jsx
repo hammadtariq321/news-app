@@ -46,8 +46,8 @@ function Navbar() {
         </div>
     }
     return (
-        <div className='border border-b-1 p-5 md:px-10'>
-            <div className='flex justify-between items-center'>
+        <div className='border-b-2 p-5 md:px-10 '>
+            <div className='flex justify-between items-center md:w-[75%] m-auto'>
                 <div className='text-2xl font-semibold text-gray-600'>News App</div>
                 <div className='flex gap-5'>
                     {nav_links?.map((item, index) => {
