@@ -6,7 +6,8 @@ const App = () => {
   const obj = useGetPostsQuery();
   return (
     <main className=''>
-      <Navbar />
+      {/* <Navbar /> */}
+      <h1>Hello world</h1>
     </main>
   )
 }

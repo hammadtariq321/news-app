@@ -5,6 +5,7 @@ import "./index.css";
 import { Provider } from "react-redux";
 import { store } from "./store/index.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
+      <Navbar />
       <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>

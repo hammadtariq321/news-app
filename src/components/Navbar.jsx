@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaSearch } from "react-icons/fa";
 
 function Navbar() {
     const nav_links = [
@@ -22,7 +23,9 @@ function Navbar() {
                         )
                     })}
                 </div>
-                <div>kasjd</div>
+                <div>
+                    <FaSearch />
+                </div>
             </div>
         </div>
     )
