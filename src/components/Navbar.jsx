@@ -52,7 +52,7 @@ function Navbar() {
                 <div className='flex gap-5'>
                     {nav_links?.map((item, index) => {
                         return (
-                            <div key={index} className='text-gray-600 text-md hidden md:block'>{item?.name}</div>
+                            <div key={index} className='text-gray-600 text-md hidden md:block '>{item?.name}</div>
                         )
                     })}
                 </div>
