@@ -46,7 +46,7 @@ function Navbar() {
         </div>
     }
     return (
-        <div className='border border-b-1 py-5 px-5   md:px-10'>
+        <div className='border border-b-1 p-5 md:px-10'>
             <div className='flex justify-between items-center'>
                 <div className='text-2xl font-semibold text-gray-600'>News App</div>
                 <div className='flex gap-5'>
