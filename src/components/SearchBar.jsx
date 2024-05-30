@@ -8,13 +8,13 @@ const SearchBar = ({ onSearch }) => {
     };
 
     return (
-        <div className="flex items-center space-x-4 mb-4 p-4 bg-white rounded-md shadow-md">
+        <div className="flex flex-col md:flex-row md:items-center md:space-x-4 mb-4 p-4 bg-white rounded-md shadow-md">
             <input
                 type="text"
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)}
                 placeholder="Search for articles..."
-                className="flex-grow border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-grow border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2 md:mb-0"
             />
             <button
                 onClick={handleSearch}
@@ -23,6 +23,7 @@ const SearchBar = ({ onSearch }) => {
                 Search
             </button>
         </div>
+
     );
 };
 
