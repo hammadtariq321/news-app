@@ -19,9 +19,9 @@ const Filters = ({ onFilter }) => {
     }, [selectedSection, selectedAuthor]);
 
     return (
-        <div className="flex space-x-4 mb-4">
+        <div className="flex flex-col md:flex-row md:space-x-4 mb-4">
             <select
-                className="border border-gray-300 rounded-md p-2"
+                className="border border-gray-300 rounded-md p-2 mb-2 md:mb-0 w-full"
                 onChange={(e) => setSelectedSection(e.target.value)}
                 value={selectedSection}
             >
@@ -32,7 +32,7 @@ const Filters = ({ onFilter }) => {
             </select>
 
             <select
-                className="border border-gray-300 rounded-md p-2"
+                className="border border-gray-300 rounded-md p-2 mb-2 md:mb-0 w-full"
                 onChange={(e) => setSelectedAuthor(e.target.value)}
                 value={selectedAuthor}
             >
@@ -49,6 +49,7 @@ const Filters = ({ onFilter }) => {
                 Filter
             </button>
         </div>
+
     );
 };
 
