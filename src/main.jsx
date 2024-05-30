@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { store } from "./store/index.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
+import ArticleDetail from "./ArticleDetail.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/article/:id",
-    element: <div>About us</div>,
+    element: <ArticleDetail />,
   },
 ]);
 
