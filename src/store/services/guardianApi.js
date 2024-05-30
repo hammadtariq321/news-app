@@ -24,6 +24,9 @@ export const guardianApi = createApi({
                 return `search?${params.toString()}`;
             }
         }),
+        fetchArticle: builder.query({
+            query: (id) => `/${id}?api-key=${API_KEY}&show-fields=headline,byline,thumbnail,bodyText`
+        }),
         fetchSections: builder.query({
             query: () => `sections?api-key=${API_KEY}`
         }),
@@ -33,4 +36,4 @@ export const guardianApi = createApi({
     })
 });
 
-export const { useFetchArticlesQuery, useFetchSectionsQuery, useFetchAuthorsQuery } = guardianApi;
+export const { useFetchArticlesQuery, useFetchArticleQuery, useFetchSectionsQuery, useFetchAuthorsQuery } = guardianApi;
