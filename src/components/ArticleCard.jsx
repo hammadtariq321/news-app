@@ -8,7 +8,7 @@ const ArticleCard = ({ article }) => {
             <img src={fields.thumbnail} alt={webTitle} className="w-full h-48 object-cover rounded-md mb-4" />
             <h2 className="text-xl font-semibold mb-2">{webTitle}</h2>
             <p className="text-gray-600">{fields.byline}</p>
-            <Link to={`/article/${id}`} className="text-blue-500 hover:underline mt-2 block">Read More</Link>
+            <Link to={`/detail/${btoa(id)}`} className="text-blue-500 hover:underline mt-2 block">Read More</Link>
         </div>
     );
 };

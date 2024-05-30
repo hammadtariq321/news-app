@@ -14,7 +14,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/article/:id",
+    // path: "detail/:section/:type/:year/:month/:day/:id",
+    path: "detail/:id",
     element: <ArticleDetail />,
   },
 ]);
