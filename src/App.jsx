@@ -35,10 +35,6 @@ const App = () => {
         {error && <p>Error: {error.message}</p>}
         <ArticleList articles={articles} />
       </div>
-      {/* <div className='flex gap-3'> */}
-      {/* <Banner />
-        <Banner /> */}
-      {/* </div> */}
     </main>
   )
 }
