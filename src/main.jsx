@@ -11,6 +11,7 @@ import ArticlesPage from "./pages/ArticlesPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import NewsDetailPage from "./pages/NewsDetailPage.jsx";
 import SearchNewsPage from "./pages/SearchNewsPage.jsx";
+import PersonalizedNewsFeed from "./pages/PersonalizedNewsFeed.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
     // path: "detail/:section/:type/:year/:month/:day/:id",
     path: "search",
     element: <SearchNewsPage />,
+  },
+  {
+    // path: "detail/:section/:type/:year/:month/:day/:id",
+    path: "personalized",
+    element: <PersonalizedNewsFeed />,
   },
 ]);
 

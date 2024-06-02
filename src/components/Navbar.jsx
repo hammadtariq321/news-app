@@ -14,8 +14,8 @@ const nav_links = [
         'link': "/articles",
     },
     {
-        'name': "Sports",
-        'link': "/sports",
+        'name': "Personalized",
+        'link': "/personalized",
     }
 ]
 function Navbar() {
