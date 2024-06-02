@@ -12,7 +12,7 @@ const ArticlesPage = () => {
         toDate: '',
         section: '',
         page: 1,
-        pageSize: 10
+        pageSize: 12
     });
 
     const { data: articlesData, error, isLoading } = useFetchArticlesQuery(searchParams);
@@ -28,9 +28,10 @@ const ArticlesPage = () => {
     return (
         <main className='p-5 justify-center md:w-[75%] m-auto'>
             <Navbar />
-            <div>
+            <div className='p-5'>
+                <h1 className='font-bold text-5xl py-5 italic text-center'>Top Articles</h1>
                 <SearchBar onSearch={handleSearch} />
-                <Filters onFilter={handleFilter} />
+                {/* <Filters onFilter={handleFilter} /> */}
                 {isLoading && <p>Loading...</p>}
                 {error && <p>Error: {error.message}</p>}
                 <ArticleList articles={articles} />

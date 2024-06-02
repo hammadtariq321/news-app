@@ -10,11 +10,14 @@ const Headlines = ({ category, country }) => {
 
     return (
         <div className="flex flex-wrap gap-4">
-            {data.articles.map((article) => (
-                <div key={article.url} className="max-w-sm w-full lg:max-w-full lg:flex">
+            {data.articles.map((article) => {
+                if (article?.content === "[Removed]") {
+                    return
+                }
+                return <div key={article.url} className="max-w-sm w-full lg:max-w-full lg:flex border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400">
                     <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style={{ backgroundImage: `url(${article.urlToImage})` }} title={article.title}>
                     </div>
-                    <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                    <div className=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                         <div className="mb-8">
                             <h3 className="text-gray-900 font-bold text-xl mb-2">{article.title}</h3>
                             <p className="text-gray-700 text-base">{article.description}</p>
@@ -30,7 +33,7 @@ const Headlines = ({ category, country }) => {
                         </div>
                     </div>
                 </div>
-            ))}
+            })}
         </div>
     );
 };

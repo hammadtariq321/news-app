@@ -8,11 +8,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import ArticleDetail from "./ArticleDetail.jsx";
 import ArticlesPage from "./pages/ArticlesPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <HomePage />,
   },
   {
     path: "/articles",
