@@ -1,22 +1,24 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
+const NEWS_API_KEY = '4f7267d36a4d4d408c927f812c372886';
 
 export const newsApi = createApi({
-    reducerPath: "news",
-    baseQuery: fetchBaseQuery({
-        baseUrl: "https://jsonplaceholder.typicode.com",
-    }),
+    reducerPath: 'newsApi',
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://newsapi.org/v2/' }),
     endpoints: (builder) => ({
-        getPosts: builder.query({
-            query: () => "/posts",
+        getTopHeadlines: builder.query({
+            query: ({ category = 'general', country = 'us' }) =>
+                `top-headlines?category=${category}&country=${country}&apiKey=${NEWS_API_KEY}`,
         }),
-        addPost: builder.mutation({
-            query: (newPost) => ({
-                url: "/posts",
-                method: "POST",
-                body: newPost,
-            }),
+        searchNews: builder.query({
+            query: (query) =>
+                `everything?q=${query}&apiKey=${NEWS_API_KEY}`,
+        }),
+        getSources: builder.query({
+            query: () =>
+                `sources?apiKey=${NEWS_API_KEY}`,
         }),
     }),
 });
 
-export const { useGetPostsQuery, useAddPostMutation } = newsApi;
+export const { useGetTopHeadlinesQuery, useSearchNewsQuery, useGetSourcesQuery } = newsApi;

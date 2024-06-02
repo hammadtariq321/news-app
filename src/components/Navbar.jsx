@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaBars, FaSearch } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
+import SearchNews from './SearchNews';
 
 const nav_links = [
     {
@@ -40,9 +41,7 @@ function Navbar() {
             <div className='flex justify-end'>
                 <IoIosClose className='cursor-pointer text-3xl text-right' onClick={() => setOpenSearch(false)} />
             </div>
-            <div className='flex-row justify-center text-center'>
-                <input placeholder='Search...' className='border p-3 mt-5 rounded-lg' />
-            </div>
+            <SearchNews />
         </div>
     }
     return (

@@ -6,12 +6,12 @@ import { guardianApi } from "./services/guardianApi";
 
 export const store = configureStore({
     reducer: {
-        // [newsApi.reducerPath]: newsApi.reducer,
+        [newsApi.reducerPath]: newsApi.reducer,
         [guardianApi.reducerPath]: guardianApi.reducer
     },
     middleware: (getDefaultMiddleware) =>
         // getDefaultMiddleware().concat(newsApi.middleware)
-        getDefaultMiddleware().concat(guardianApi.middleware)
+        getDefaultMiddleware().concat(newsApi.middleware, guardianApi.middleware)
 });
 
 setupListeners(store.dispatch);

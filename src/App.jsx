@@ -5,6 +5,9 @@ import { useFetchArticlesQuery } from './store/services/guardianApi';
 import SearchBar from './components/SearchBar';
 import Filters from './components/Filters';
 import ArticleList from './components/ArticleList';
+import Headlines from './components/Headlines';
+import NewsSources from './components/NewsSources';
+import SearchNews from './components/SearchNews';
 
 const App = () => {
   const [searchParams, setSearchParams] = useState({
@@ -33,7 +36,10 @@ const App = () => {
         <Filters onFilter={handleFilter} />
         {isLoading && <p>Loading...</p>}
         {error && <p>Error: {error.message}</p>}
-        <ArticleList articles={articles} />
+        {/* <ArticleList articles={articles} /> */}
+        {/* <Headlines category="technology" country="us" /> */}
+        {/* <NewsSources /> */}
+        {/* <SearchNews /> */}
       </div>
     </main>
   )
