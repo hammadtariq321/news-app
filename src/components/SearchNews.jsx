@@ -12,7 +12,7 @@ const SearchNews = () => {
 
     return (
         <div className="my-4">
-            <form onSubmit={handleSearch} className="flex mb-4">
+            <form onSubmit={handleSearch} className="flex mb-4 ">
                 <input
                     type="text"
                     name="search"
