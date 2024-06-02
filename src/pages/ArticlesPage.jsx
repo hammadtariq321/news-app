@@ -44,7 +44,7 @@ const ArticlesPage = () => {
             <div className=''>
                 <h1 className='font-bold text-5xl py-8 italic text-center'>Top Articles</h1>
                 {/* <SearchBar onSearch={handleSearch} /> */}
-                {/* <Filters onFilter={handleFilter} /> */}
+                <Filters onFilter={handleFilter} />
                 {isLoading && <p>Loading...</p>}
                 {error && <p>Error: {error.message}</p>}
                 <ArticleList articles={articles} />
