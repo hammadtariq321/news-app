@@ -37,14 +37,14 @@ function Navbar() {
         </div>
     }
 
-    if (openSearch) {
-        return <div className='bg-white absolute top-0 right-0 left-0 bottom-0 flex-row p-5 transition-all z-50'>
-            <div className='flex justify-end'>
-                <IoIosClose className='cursor-pointer text-3xl text-right' onClick={() => setOpenSearch(false)} />
-            </div>
-            <SearchNews />
-        </div>
-    }
+    // if (openSearch) {
+    //     return <div className='bg-white absolute top-0 right-0 left-0 bottom-0 flex-row p-5 transition-all z-50 h-screen overflow-scroll'>
+    //         <div className='flex justify-end'>
+    //             <IoIosClose className='cursor-pointer text-3xl text-right' onClick={() => setOpenSearch(false)} />
+    //         </div>
+    //         <SearchNews />
+    //     </div>
+    // }
     return (
         <div className='border-b-2 p-5 md:px-10 '>
             <div className='flex justify-between items-center md:w-[75%] m-auto'>
@@ -67,7 +67,9 @@ function Navbar() {
                 </div>
                 <div className='flex gap-4'>
                     <FaBars className='cursor-pointer md:hidden' onClick={() => setOpenMenu(true)} />
-                    <FaSearch className='cursor-pointer' onClick={() => setOpenSearch(true)} />
+                    <Link to="/search">
+                        <FaSearch className='cursor-pointer' />
+                    </Link>
                 </div>
             </div>
 

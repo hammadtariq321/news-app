@@ -18,7 +18,11 @@ export const newsApi = createApi({
             query: () =>
                 `sources?apiKey=${NEWS_API_KEY}`,
         }),
+        getNewsById: builder.query({
+            query: (id) =>
+                `everything?q=${id}&apiKey=${NEWS_API_KEY}`,
+        }),
     }),
 });
 
-export const { useGetTopHeadlinesQuery, useSearchNewsQuery, useGetSourcesQuery } = newsApi;
+export const { useGetTopHeadlinesQuery, useSearchNewsQuery, useGetSourcesQuery, useGetNewsByIdQuery } = newsApi;

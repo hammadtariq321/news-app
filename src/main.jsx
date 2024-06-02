@@ -9,11 +9,17 @@ import Navbar from "./components/Navbar.jsx";
 import ArticleDetail from "./ArticleDetail.jsx";
 import ArticlesPage from "./pages/ArticlesPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import NewsDetailPage from "./pages/NewsDetailPage.jsx";
+import SearchNewsPage from "./pages/SearchNewsPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "/:newsId",
+    element: <NewsDetailPage />,
   },
   {
     path: "/articles",
@@ -23,6 +29,11 @@ const router = createBrowserRouter([
     // path: "detail/:section/:type/:year/:month/:day/:id",
     path: "detail/:id",
     element: <ArticleDetail />,
+  },
+  {
+    // path: "detail/:section/:type/:year/:month/:day/:id",
+    path: "search",
+    element: <SearchNewsPage />,
   },
 ]);
 
