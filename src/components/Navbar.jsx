@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FaBars, FaSearch } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 import SearchNews from './SearchNews';
+import { Link, NavLink } from 'react-router-dom';
 
 const nav_links = [
     {
@@ -9,8 +10,8 @@ const nav_links = [
         'link': "/",
     },
     {
-        'name': "Technology",
-        'link': "/technology",
+        'name': "Articles",
+        'link': "/articles",
     },
     {
         'name': "Sports",
@@ -49,9 +50,18 @@ function Navbar() {
             <div className='flex justify-between items-center md:w-[75%] m-auto'>
                 <div className='text-2xl font-semibold text-gray-600'>News App</div>
                 <div className='flex gap-5'>
-                    {nav_links?.map((item, index) => {
+                    {nav_links?.map((link, index) => {
                         return (
-                            <div key={index} className=' text-md hidden md:block '>{item?.name}</div>
+                            <NavLink
+                                key={index}
+                                to={link.link}
+                                className={({ isActive }) =>
+                                    isActive ? 'text-md hidden md:block font-semibold underline' : 'text-md hidden md:block'
+                                }
+                            >
+                                {link?.name}
+                            </NavLink>
+
                         )
                     })}
                 </div>

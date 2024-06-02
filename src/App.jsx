@@ -31,6 +31,7 @@ const App = () => {
   };
   return (
     <main className='p-5 justify-center md:w-[75%] m-auto'>
+      <Navbar />
       <div>
         <SearchBar onSearch={handleSearch} />
         <Filters onFilter={handleFilter} />

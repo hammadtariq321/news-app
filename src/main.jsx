@@ -7,11 +7,16 @@ import { store } from "./store/index.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import ArticleDetail from "./ArticleDetail.jsx";
+import ArticlesPage from "./pages/ArticlesPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/articles",
+    element: <ArticlesPage />,
   },
   {
     // path: "detail/:section/:type/:year/:month/:day/:id",
@@ -23,7 +28,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      <Navbar />
       <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>
