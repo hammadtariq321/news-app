@@ -29,8 +29,8 @@ This project is a user interface for a news aggregator website, designed to pull
 1- Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/frontend-take-home-challenge.git
-cd frontend-take-home-challenge
+git clone https://github.com/hammadtariq321/news-app.git
+cd news-app
 
 ```
     
@@ -60,7 +60,7 @@ npm run dev
 
 
 ```bash
-docker build -t my-react-app .
+docker build -t news-app .
 
 
 ```
@@ -72,7 +72,7 @@ docker build -t my-react-app .
 
 
 ```bash
-docker run -p 80:80 my-react-app
+docker run -p 80:80 news-app
 
 
 ```
