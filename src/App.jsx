@@ -37,10 +37,6 @@ const App = () => {
         <Filters onFilter={handleFilter} />
         {isLoading && <p>Loading...</p>}
         {error && <p>Error: {error.message}</p>}
-        {/* <ArticleList articles={articles} /> */}
-        {/* <Headlines category="technology" country="us" /> */}
-        {/* <NewsSources /> */}
-        {/* <SearchNews /> */}
       </div>
     </main>
   )

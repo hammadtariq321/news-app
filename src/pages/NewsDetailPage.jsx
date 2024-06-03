@@ -18,7 +18,6 @@ const NewsDetailPage = () => {
 
     return (
         <main className='p-5 justify-center md:w-[75%] m-auto'>
-            <Navbar />
             <div className="max-w-2xl mx-auto mt-5">
                 <img src={article.urlToImage} alt={article.title} className="w-full h-64 object-cover rounded-md mb-4" />
                 <h2 className="text-2xl font-semibold mb-4">{article.title}</h2>

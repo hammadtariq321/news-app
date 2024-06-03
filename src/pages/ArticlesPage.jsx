@@ -40,7 +40,6 @@ const ArticlesPage = () => {
 
     return (
         <main className='p-5 justify-center md:w-[75%] m-auto'>
-            <Navbar />
             <div className=''>
                 <h1 className='font-bold text-5xl py-8 italic text-center'>Top Articles</h1>
                 {/* <SearchBar onSearch={handleSearch} /> */}
