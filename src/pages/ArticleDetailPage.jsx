@@ -1,11 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useFetchArticleQuery } from './store/services/guardianApi';
+import { useFetchArticleQuery } from '../store/services/guardianApi';
 
-const ArticleDetail = () => {
+const ArticleDetailPage = () => {
     const { id } = useParams();
     const { data: articleData, error, isLoading } = useFetchArticleQuery(atob(id));
-    console.log("🚀 ~ ArticleDetail ~ articleData:", articleData)
+    console.log("🚀 ~ ArticleDetailPage ~ articleData:", articleData)
     const article = articleData?.response?.content;
 
     if (isLoading) return <p>Loading...</p>;
@@ -24,4 +24,4 @@ const ArticleDetail = () => {
     );
 };
 
-export default ArticleDetail;
+export default ArticleDetailPage;
